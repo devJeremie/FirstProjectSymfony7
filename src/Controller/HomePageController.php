@@ -11,8 +11,13 @@ class HomePageController extends AbstractController
     #[Route('/', name: 'app_home_page')]
     public function index(): Response
     {
+        $nomsStudents=['Jérémie', 'Ousmane', 'Alexia', 'Chouaibou'];
+        $age =17;
+
         return $this->render('home_page/index.html.twig', [
-            'controller_name' => 'HomePageController',
+            // 'controller_name' => 'HomePageController',
+            'lesNoms' => $nomsStudents,
+            'age' => $age
         ]);
     }
 }
